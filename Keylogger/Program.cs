@@ -11,6 +11,26 @@ namespace Keylogger
         static void Main(string[] args)
         {
             Console.WriteLine("setup");
+            Console.WriteLine("setup");
+
+            Console.WriteLine("setup");
+
+            Console.WriteLine("setup");
+            Console.WriteLine("setup");
+            Console.WriteLine("setup");
+            Console.WriteLine("setup");
+            Console.WriteLine("setup");
+            Console.WriteLine("setup");
+
+
+
+
+
+
+
+
+
+
         }
     }
 }
