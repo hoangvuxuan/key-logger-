@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{AC8C92CB-68E2-4F17-8A84-0C071B9F8F66}|Keylogger\\Keylogger.csproj|d:\\c#\\keylogger\\keylogger\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC8C92CB-68E2-4F17-8A84-0C071B9F8F66}|Keylogger\\Keylogger.csproj|solutionrelative:keylogger\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC8C92CB-68E2-4F17-8A84-0C071B9F8F66}|Keylogger\\Keylogger.csproj|d:\\c#\\keylogger\\keylogger\\all_class\\test_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC8C92CB-68E2-4F17-8A84-0C071B9F8F66}|Keylogger\\Keylogger.csproj|solutionrelative:keylogger\\all_class\\test_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "test_1.cs",
+              "DocumentMoniker": "D:\\c#\\Keylogger\\Keylogger\\all_class\\test_1.cs",
+              "RelativeDocumentMoniker": "Keylogger\\all_class\\test_1.cs",
+              "ToolTip": "D:\\c#\\Keylogger\\Keylogger\\all_class\\test_1.cs",
+              "RelativeToolTip": "Keylogger\\all_class\\test_1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T00:26:30.471Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "Keylogger\\Program.cs",
               "ToolTip": "D:\\c#\\Keylogger\\Keylogger\\Program.cs",
               "RelativeToolTip": "Keylogger\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T09:11:37.572Z",
               "EditorCaption": ""

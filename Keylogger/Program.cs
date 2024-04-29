@@ -10,27 +10,10 @@ namespace Keylogger
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("setup");
-            Console.WriteLine("setup");
-
-            Console.WriteLine("setup");
-
-            Console.WriteLine("setup");
-            Console.WriteLine("setup");
-            Console.WriteLine("setup");
-            Console.WriteLine("setup");
-            Console.WriteLine("setup");
-            Console.WriteLine("setup");
-
-
-
-
-
-
-
-
-
-
+            for(int i = 0; i< 10; i++)
+            {
+                Console.WriteLine(1);
+            }
         }
     }
 }
