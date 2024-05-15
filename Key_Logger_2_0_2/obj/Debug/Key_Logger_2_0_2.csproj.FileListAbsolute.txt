@@ -1,0 +1,7 @@
+D:\c#\Keylogger\Key_Logger_2_0_2\bin\Debug\Key_Logger_2_0_2.exe.config
+D:\c#\Keylogger\Key_Logger_2_0_2\bin\Debug\Key_Logger_2_0_2.exe
+D:\c#\Keylogger\Key_Logger_2_0_2\bin\Debug\Key_Logger_2_0_2.pdb
+D:\c#\Keylogger\Key_Logger_2_0_2\obj\Debug\Key_Logger_2_0_2.csproj.AssemblyReference.cache
+D:\c#\Keylogger\Key_Logger_2_0_2\obj\Debug\Key_Logger_2_0_2.csproj.CoreCompileInputs.cache
+D:\c#\Keylogger\Key_Logger_2_0_2\obj\Debug\Key_Logger_2_0_2.exe
+D:\c#\Keylogger\Key_Logger_2_0_2\obj\Debug\Key_Logger_2_0_2.pdb

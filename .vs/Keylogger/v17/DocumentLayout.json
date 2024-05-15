@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\c#\\Keylogger\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07C1DFA3-BD72-473E-A50B-C997460349DE}|key_logger\\key_logger.csproj|d:\\c#\\keylogger\\key_logger\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07C1DFA3-BD72-473E-A50B-C997460349DE}|key_logger\\key_logger.csproj|solutionrelative:key_logger\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07C1DFA3-BD72-473E-A50B-C997460349DE}|key_logger\\key_logger.csproj|d:\\c#\\keylogger\\key_logger\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{07C1DFA3-BD72-473E-A50B-C997460349DE}|key_logger\\key_logger.csproj|solutionrelative:key_logger\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{96A626C9-6D83-4696-9A21-C97126497775}|Key_Logger_2_0_2\\Key_Logger_2_0_2.csproj|d:\\c#\\keylogger\\key_logger_2_0_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96A626C9-6D83-4696-9A21-C97126497775}|Key_Logger_2_0_2\\Key_Logger_2_0_2.csproj|solutionrelative:key_logger_2_0_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +19,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\c#\\Keylogger\\key_logger\\Form1.cs",
-              "RelativeDocumentMoniker": "key_logger\\Form1.cs",
-              "ToolTip": "D:\\c#\\Keylogger\\key_logger\\Form1.cs",
-              "RelativeToolTip": "key_logger\\Form1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAJAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\c#\\Keylogger\\Key_Logger_2_0_2\\Program.cs",
+              "RelativeDocumentMoniker": "Key_Logger_2_0_2\\Program.cs",
+              "ToolTip": "D:\\c#\\Keylogger\\Key_Logger_2_0_2\\Program.cs",
+              "RelativeToolTip": "Key_Logger_2_0_2\\Program.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAAAE8AAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T03:11:31.206Z",
+              "WhenOpened": "2024-05-15T14:06:45.177Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\c#\\Keylogger\\key_logger\\Form1.cs",
-              "RelativeDocumentMoniker": "key_logger\\Form1.cs",
-              "ToolTip": "D:\\c#\\Keylogger\\key_logger\\Form1.cs [Design]",
-              "RelativeToolTip": "key_logger\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T03:11:06.048Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }
