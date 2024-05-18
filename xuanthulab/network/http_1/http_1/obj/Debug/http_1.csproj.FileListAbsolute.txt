@@ -1,7 +1,0 @@
-D:\c#\xuanthulab\network\http_1\http_1\bin\Debug\http_1.exe.config
-D:\c#\xuanthulab\network\http_1\http_1\bin\Debug\http_1.exe
-D:\c#\xuanthulab\network\http_1\http_1\bin\Debug\http_1.pdb
-D:\c#\xuanthulab\network\http_1\http_1\obj\Debug\http_1.csproj.AssemblyReference.cache
-D:\c#\xuanthulab\network\http_1\http_1\obj\Debug\http_1.csproj.CoreCompileInputs.cache
-D:\c#\xuanthulab\network\http_1\http_1\obj\Debug\http_1.exe
-D:\c#\xuanthulab\network\http_1\http_1\obj\Debug\http_1.pdb
