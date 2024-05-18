@@ -1,0 +1,7 @@
+D:\c#\xuanthulab\network\Networking3\Networking3\bin\Debug\Networking3.exe.config
+D:\c#\xuanthulab\network\Networking3\Networking3\bin\Debug\Networking3.exe
+D:\c#\xuanthulab\network\Networking3\Networking3\bin\Debug\Networking3.pdb
+D:\c#\xuanthulab\network\Networking3\Networking3\obj\Debug\Networking3.csproj.AssemblyReference.cache
+D:\c#\xuanthulab\network\Networking3\Networking3\obj\Debug\Networking3.csproj.CoreCompileInputs.cache
+D:\c#\xuanthulab\network\Networking3\Networking3\obj\Debug\Networking3.exe
+D:\c#\xuanthulab\network\Networking3\Networking3\obj\Debug\Networking3.pdb

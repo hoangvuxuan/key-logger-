@@ -1,0 +1,14 @@
+D:\c#\xuanthulab\network\network_core_1\network_core_1\bin\Debug\net8.0\network_core_1.exe
+D:\c#\xuanthulab\network\network_core_1\network_core_1\bin\Debug\net8.0\network_core_1.deps.json
+D:\c#\xuanthulab\network\network_core_1\network_core_1\bin\Debug\net8.0\network_core_1.runtimeconfig.json
+D:\c#\xuanthulab\network\network_core_1\network_core_1\bin\Debug\net8.0\network_core_1.dll
+D:\c#\xuanthulab\network\network_core_1\network_core_1\bin\Debug\net8.0\network_core_1.pdb
+D:\c#\xuanthulab\network\network_core_1\network_core_1\obj\Debug\net8.0\network_core_1.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#\xuanthulab\network\network_core_1\network_core_1\obj\Debug\net8.0\network_core_1.AssemblyInfoInputs.cache
+D:\c#\xuanthulab\network\network_core_1\network_core_1\obj\Debug\net8.0\network_core_1.AssemblyInfo.cs
+D:\c#\xuanthulab\network\network_core_1\network_core_1\obj\Debug\net8.0\network_core_1.csproj.CoreCompileInputs.cache
+D:\c#\xuanthulab\network\network_core_1\network_core_1\obj\Debug\net8.0\network_core_1.dll
+D:\c#\xuanthulab\network\network_core_1\network_core_1\obj\Debug\net8.0\refint\network_core_1.dll
+D:\c#\xuanthulab\network\network_core_1\network_core_1\obj\Debug\net8.0\network_core_1.pdb
+D:\c#\xuanthulab\network\network_core_1\network_core_1\obj\Debug\net8.0\network_core_1.genruntimeconfig.cache
+D:\c#\xuanthulab\network\network_core_1\network_core_1\obj\Debug\net8.0\ref\network_core_1.dll
